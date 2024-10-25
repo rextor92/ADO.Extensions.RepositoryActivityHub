@@ -1,0 +1,37 @@
+{
+	"manifestVersion": 1,
+	"id": "ProjectRepoActivityLog",
+	"publisher": "rextor92",
+	"version": "0.0.3",
+	"name": "Project Repo Activity Hub",
+	"description": "A sample Visual Studio Services extension",
+	"public": false,
+	"categories": ["Azure Repos"],
+	"tags": [],
+	"targets": [
+		{
+			"id": "Microsoft.VisualStudio.Services"
+		}
+	],
+	"contributions": [
+		{
+			"id": "rextor92-repo-activity-hub",
+			"type": "ms.vss-web.hub",
+			"targets": ["ms.vss-code-web.code-hub-group"],
+			"description": "This Hub will give you insights in to who is approving the Pull Requests for your repository.",
+			"properties": {
+				"name": "Repo Activity",
+				"uri": "dist/RepoActivityHub/RepoActivityHub.html",
+				"order": 100,
+				"icon": ""
+			}
+		}
+	],
+	"scopes": ["vso.code"],
+	"files": [
+		{
+			"path": "dist",
+			"addressable": true
+		}
+	]
+}
